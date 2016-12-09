@@ -22,6 +22,7 @@
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     UIWebView* webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
     NSURL* url = [[NSBundle mainBundle] URLForResource:@"db" withExtension:@"html"];
+    url = [NSURL URLWithString:@"https://www.baidu.com"];
     self.webview = webview;
     [self.view addSubview:webview];
     [webview loadRequest:[NSURLRequest requestWithURL:url]];
@@ -30,6 +31,9 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
