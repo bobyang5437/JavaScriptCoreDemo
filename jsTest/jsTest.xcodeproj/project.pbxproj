@@ -16,6 +16,7 @@
 		2FAD08C41DF6B7190032516A /* jsTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD08C31DF6B7190032516A /* jsTestTests.m */; };
 		2FAD08CF1DF6B7190032516A /* jsTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD08CE1DF6B7190032516A /* jsTestUITests.m */; };
 		2FAD08E21DFA781F0032516A /* db.html in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD08E11DFA781F0032516A /* db.html */; };
+		2FAD08E41DFBD19F0032516A /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD08E31DFBD19F0032516A /* test.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		2FAD08CE1DF6B7190032516A /* jsTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jsTestUITests.m; sourceTree = "<group>"; };
 		2FAD08D01DF6B7190032516A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FAD08E11DFA781F0032516A /* db.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = db.html; sourceTree = "<group>"; };
+		2FAD08E31DFBD19F0032516A /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				2FAD08AF1DF6B7190032516A /* ViewController.h */,
 				2FAD08B01DF6B7190032516A /* ViewController.m */,
 				2FAD08E11DFA781F0032516A /* db.html */,
+				2FAD08E31DFBD19F0032516A /* test.js */,
 				2FAD08B21DF6B7190032516A /* Main.storyboard */,
 				2FAD08B51DF6B7190032516A /* Assets.xcassets */,
 				2FAD08B71DF6B7190032516A /* LaunchScreen.storyboard */,
@@ -249,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FAD08E41DFBD19F0032516A /* test.js in Resources */,
 				2FAD08E21DFA781F0032516A /* db.html in Resources */,
 				2FAD08B91DF6B7190032516A /* LaunchScreen.storyboard in Resources */,
 				2FAD08B61DF6B7190032516A /* Assets.xcassets in Resources */,
@@ -427,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = jsTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yang.jsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -438,6 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = jsTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yang.jsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

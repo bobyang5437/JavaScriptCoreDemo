@@ -55,9 +55,31 @@
     };
     
     self.context[@"alert"] = ^(NSString* str ) {
-        UIAlertView* al = [[UIAlertView alloc] initWithTitle:@"测试" message:str delegate:self cancelButtonTitle:@"返回" otherButtonTitles:@"确定", nil];
+        UIAlertView* al = [[UIAlertView alloc] initWithTitle:@"测试" message:str delegate:nil cancelButtonTitle:@"返回" otherButtonTitles:@"确定", nil];
         [al show];
     };
+    
+//    [webView stringByEvaluatingJavaScriptFromString:@"showAlert('it is a test!')"];
+    self.context[@"relog"] = ^() {
+        NSLog(@"+++++++Begin Log+++++++");
+        
+        NSArray *args = [JSContext currentArguments];
+        for (JSValue *jsVal in args) {
+            NSLog(@"%@", jsVal);
+        }
+        
+        JSValue *this = [JSContext currentThis];
+        NSLog(@"this: %@",this);
+        NSLog(@"-------End Log-------");
+    };
+    
+    [self.context evaluateScript:@"relog('ider', [7, 21], { hello:'world', js:100 });"];
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
+    NSString* jsStr = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    [self.context evaluateScript:jsStr];
+    JSValue* result = [self.context[@"factorial"] callWithArguments:@[@10]];
+    NSLog(@"factorial is %d",[result toInt32]);
 }
 
 - (BOOL)prefersStatusBarHidden {
