@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F91FD0C1DFFD71C00589041 /* MyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F91FD0B1DFFD71C00589041 /* MyObject.m */; };
 		2FAD08AB1DF6B7190032516A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD08AA1DF6B7190032516A /* main.m */; };
 		2FAD08AE1DF6B7190032516A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD08AD1DF6B7190032516A /* AppDelegate.m */; };
 		2FAD08B11DF6B7190032516A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD08B01DF6B7190032516A /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F91FD0A1DFFD71C00589041 /* MyObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyObject.h; sourceTree = "<group>"; };
+		2F91FD0B1DFFD71C00589041 /* MyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyObject.m; sourceTree = "<group>"; };
 		2FAD08A61DF6B7190032516A /* jsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAD08AA1DF6B7190032516A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2FAD08AC1DF6B7190032516A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 				2FAD08AD1DF6B7190032516A /* AppDelegate.m */,
 				2FAD08AF1DF6B7190032516A /* ViewController.h */,
 				2FAD08B01DF6B7190032516A /* ViewController.m */,
+				2F91FD0A1DFFD71C00589041 /* MyObject.h */,
+				2F91FD0B1DFFD71C00589041 /* MyObject.m */,
 				2FAD08E11DFA781F0032516A /* db.html */,
 				2FAD08E31DFBD19F0032516A /* test.js */,
 				2FAD08B21DF6B7190032516A /* Main.storyboard */,
@@ -208,11 +213,12 @@
 		2FAD089E1DF6B7190032516A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Silence;
 				TargetAttributes = {
 					2FAD08A51DF6B7190032516A = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = TSD9R9GT68;
 						ProvisioningStyle = Automatic;
 					};
 					2FAD08BE1DF6B7190032516A = {
@@ -283,6 +289,7 @@
 			files = (
 				2FAD08B11DF6B7190032516A /* ViewController.m in Sources */,
 				2FAD08AE1DF6B7190032516A /* AppDelegate.m in Sources */,
+				2F91FD0C1DFFD71C00589041 /* MyObject.m in Sources */,
 				2FAD08AB1DF6B7190032516A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +363,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -403,6 +411,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -430,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TSD9R9GT68;
 				INFOPLIST_FILE = jsTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -442,6 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TSD9R9GT68;
 				INFOPLIST_FILE = jsTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

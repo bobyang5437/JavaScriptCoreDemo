@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
+#import "MyObject.h"
 
 @interface ViewController ()<UIWebViewDelegate>
 
@@ -42,12 +43,19 @@
         context.exception = exception;
         NSLog(@"%@",exception);
     };
+    self.context[@"testP"] = [[MyObject alloc] init];
     
     //测试oc调js
     NSString* js = @"function add(a,b) {return a + b}";
     [self.context evaluateScript:js];
     JSValue* n = [self.context[@"add"] callWithArguments:@[@2,@3]];
     NSLog(@"%d",[n toInt32]);
+    
+    NSString* path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
+    NSString* jsStr = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    [self.context evaluateScript:jsStr];
+    JSValue* result = [self.context[@"factorial"] callWithArguments:@[@10]];
+    NSLog(@"factorial is %d",[result toInt32]);
     
     //测试js调oc
     self.context[@"nslog"] =^(NSString* str) {
@@ -74,17 +82,12 @@
     };
     
     [self.context evaluateScript:@"relog('ider', [7, 21], { hello:'world', js:100 });"];
-    
-    NSString* path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
-    NSString* jsStr = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    [self.context evaluateScript:jsStr];
-    JSValue* result = [self.context[@"factorial"] callWithArguments:@[@10]];
-    NSLog(@"factorial is %d",[result toInt32]);
+   
 }
 
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
+//- (BOOL)prefersStatusBarHidden {
+//    return YES;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
